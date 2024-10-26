@@ -1,87 +1,163 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:900,100);
-* {
-    box-sizing: border-box;
-}
+
 
 body {
-  font-family: "Lato", sans-serif;
-  overflow: hidden;
-  background-color: #000;
-  margin: 0;
-  color: wheat;
-  text-align: center;
-  height: 100%;
+  font-family: helvetica, arial, sans-serif;
 }
+
 h1 {
-  font-size: 3em;
-  font-weight: 100 !important;
+  color: #da4213; /* #3a241d; */
+  text-align: center;
 }
-h2 {
-  font-style: italic;
-  margin-top: 4em;
-  font-size: 2em;
-  font-weight: 300;
+
+div {
+background-color: lightgray;
+
 }
-a {
-  color: #fff;
-  font-weight: 300;
-  text-decoration: none;
-}
-#flipbook {
-  position: absolute;
-  left: 100px;
-  top: 50px;
-}
-.page:not(:first-child) + div:before {
-  content: "Page " attr(title);
-  color: rgba(255, 255, 255, 0.75);
-  left: 20px;
-  top: 10px;
-  position: absolute;
-  text-shadow: 0 0 6px black;
+
+#left-container {
   
-}
-.page {
-  border: solid 3px white;
-  background: no-repeat center top;
-  background-size: cover;
-  width: 554px;
-  height: 554px;
-  overflow: hidden;
-  background-color: white;
-}
-.hard {
-  background: rgba(157, 39, 23, 1);
-}
-.hard:last-of-type() {
-  background: rgba(157, 39, 23, 1);
-}
-.no1 {
-  background-image: url(https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
-}
-.no2 {
-  background-image: url(https://images.unsplash.com/photo-1561113500-8f4ad4f80a93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80);
-}
-.no3 {
-  background-image: url(https://images.unsplash.com/photo-1551651767-d5ffbdd04b83?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1003&q=80);
-}
-.no4 {
-  background-image: url(https://images.unsplash.com/photo-1514030982278-0c4c4617d7ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80);
-}
-.no5 {
-  background-image: url(https://images.unsplash.com/photo-1532698355571-f845d2cc8151?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80);
-}
-.no6 {
-  background-image: url(https://images.unsplash.com/photo-1530178811766-8de178acf14a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80);
-}
-.no7 {
-  background-image: url(https://images.unsplash.com/photo-1596435450055-cabe20834ebf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80);
-}
+  background-color: #eee;
+  width: 15%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
 
 
-.flag {
-  font-size: 90px;
+}
+
+#right-container {
+
+  background-color: #eee;
+  width: 15%;
+  right: 0px;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+
+
+}
+
+.plant-holder {
   position: relative;
-  top: 40%;
-  user-select: none;
+  height: 13%;
+  left: -10px;
+
+
 }
+
+.plant{
+position: absolute;
+max-width: 150%;
+max-height: 150%;
+z-index: 2;
+
+}
+
+
+h1:hover{
+  color:hotpink;
+  background-color: aqua;
+}
+
+/*
+
+#left-container {
+  left: 0px;
+}
+
+#right-container {
+  right: 0px;
+}
+
+.container {
+  background-color: #eee;
+  width: 15%;
+  top: 0px;
+  position: absolute;
+  height: 100%;
+  padding: 10px;
+}
+
+.plant-holder {
+  position: relative;
+  height: 13%;
+  left: -10px;
+}
+
+.plant {
+  position: absolute;
+  max-width: 150%;
+  max-height: 150%;
+  z-index: 2;
+}
+
+
+.jar-walls {
+  height: 80%;
+  width: 60%;
+  background: #d1e1df;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: 0.5%;
+  left: 20%;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.jar-top {
+  width: 50%;
+  height: 5%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 80.5%;
+  left: 25%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.jar-bottom {
+  width: 50%;
+  height: 1%;
+  background: #d1e1df;
+  position: absolute;
+  bottom: 0%;
+  left: 25%;
+  opacity: 0.7;
+}
+
+.dirt {
+  width: 60%;
+  height: 5%;
+  background: #3a241d;
+  position: absolute;
+  border-radius: 0 0 1rem 1rem;
+  bottom: 1%;
+  left: 20%;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.jar-glossy-long {
+  width: 3%;
+  height: 20%;
+  border-radius: 2rem;
+  background: #ddfbff;
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.jar-glossy-short {
+  width: 3%;
+  height: 5%;
+  border-radius: 2rem;
+  background: #ddfbff;
+  position: absolute;
+  bottom: 45%;
+  left: 5%;
+}
+
+*/
