@@ -278,9 +278,9 @@ h2 {
 }
 .page {
 	padding: 20px;
-	background-color: #fdfaf7;
+	background-color: #f7f7fd;
 	color: #785e3a;
-	border: solid 1px #c2b5a3;
+	border: solid 1px #c2aea3;
 	overflow: hidden;
 }
 .page .page-content {
